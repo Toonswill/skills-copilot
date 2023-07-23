@@ -1,4 +1,4 @@
-// create web server
+// Create web server
 var http = require('http');
 var fs = require('fs');
 
@@ -12,8 +12,8 @@ var server = http.createServer(function (req, res) {
         fs.createReadStream(__dirname + '/contact.html').pipe(res);
     } else if (req.url === '/api/comments') {
         var comments = [
-            { name: 'John', age: 20 },
-            { name: 'Jane', age: 30 }
+            { name: 'kamau', age: 20 },
+            { name: 'kimani', age: 30 }
         ];
         res.writeHead(200, { 'Content-Type': 'application/json' });
         res.end(JSON.stringify(comments));
